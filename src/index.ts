@@ -1,2 +1,2 @@
-export { WibuRealtime } from "./realtime";
+export {}
 
