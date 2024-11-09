@@ -1,13 +1,16 @@
 {
-  "name": "package-template",
+  "name": "wibu-package",
   "version": "1.0.0",
-  "description": "Simple Wibu Package Template",
+  "description": "Simple Wibu package",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "wibu-cli": "bin/wibu-cli.js"
+  },
   "scripts": {
-    "build": "rm -rf dist && tsc",
-    "clean": "rm -rf dist",
-    "test": "echo 'Add your test script here'"
+    "build": "rm -rf dist && tsc && standard-version",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
   },
   "repository": {
     "type": "git",
@@ -26,13 +29,7 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "15.0.1",
-    "postcss": "^8.4.47",
-    "postcss-preset-mantine": "^1.17.0",
-    "postcss-simple-vars": "^7.0.1",
-    "tailwindcss": "^3.4.1",
+    "standard-version": "^9.5.0",
     "typescript": "^5"
-  },
-  "dependencies": {
-    "@supabase/supabase-js": "^2.46.1"
   }
 }
